@@ -554,6 +554,35 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
+  collectionName: 'locations';
+  info: {
+    displayName: 'Luoghi eventi';
+    pluralName: 'locations';
+    singularName: 'location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::location.location'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMenuMenu extends Struct.SingleTypeSchema {
   collectionName: 'menus';
   info: {
@@ -1219,6 +1248,7 @@ declare module '@strapi/strapi' {
       'api::dati-associazione.dati-associazione': ApiDatiAssociazioneDatiAssociazione;
       'api::event.event': ApiEventEvent;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::location.location': ApiLocationLocation;
       'api::menu.menu': ApiMenuMenu;
       'api::service.service': ApiServiceService;
       'api::social.social': ApiSocialSocial;
