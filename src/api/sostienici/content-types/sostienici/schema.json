@@ -10,5 +10,20 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "contentUp": {
+      "type": "richtext"
+    },
+    "contentDown": {
+      "type": "richtext"
+    },
+    "cards": {
+      "type": "component",
+      "component": "card.card",
+      "repeatable": true
+    }
+  }
 }
