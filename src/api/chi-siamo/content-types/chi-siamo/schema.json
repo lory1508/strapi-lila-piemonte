@@ -10,5 +10,30 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "btnStatuto": {
+      "type": "component",
+      "component": "button.button",
+      "repeatable": false
+    },
+    "sectionRendiconto": {
+      "type": "component",
+      "component": "section.section",
+      "repeatable": true
+    },
+    "footerImg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
 }

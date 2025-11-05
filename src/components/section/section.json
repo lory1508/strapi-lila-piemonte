@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "nota": {
+      "type": "component",
+      "component": "button.button",
+      "repeatable": false
+    },
+    "rendiconto": {
+      "type": "component",
+      "component": "button.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

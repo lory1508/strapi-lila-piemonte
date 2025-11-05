@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ButtonButton extends Struct.ComponentSchema {
+  collectionName: 'components_button_buttons';
+  info: {
+    displayName: 'button';
+    icon: 'bold';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface CardCard extends Struct.ComponentSchema {
   collectionName: 'components_card_cards';
   info: {
@@ -50,6 +63,32 @@ export interface LinkLink extends Struct.ComponentSchema {
   };
 }
 
+export interface LinkMenuItem extends Struct.ComponentSchema {
+  collectionName: 'components_link_menu_items';
+  info: {
+    displayName: 'menuItem';
+    icon: 'link';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'link.link', false>;
+    order: Schema.Attribute.Integer;
+    position: Schema.Attribute.Enumeration<['sinistra', 'destra']> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface SectionSection extends Struct.ComponentSchema {
+  collectionName: 'components_section_sections';
+  info: {
+    displayName: 'section';
+  };
+  attributes: {
+    nota: Schema.Attribute.Component<'button.button', false>;
+    rendiconto: Schema.Attribute.Component<'button.button', false>;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface ServiceService extends Struct.ComponentSchema {
   collectionName: 'components_service_services';
   info: {
@@ -74,10 +113,13 @@ export interface ServicesServices extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'button.button': ButtonButton;
       'card.card': CardCard;
       'event.next-event': EventNextEvent;
       'hero.hero': HeroHero;
       'link.link': LinkLink;
+      'link.menu-item': LinkMenuItem;
+      'section.section': SectionSection;
       'service.service': ServiceService;
       'services.services': ServicesServices;
     }

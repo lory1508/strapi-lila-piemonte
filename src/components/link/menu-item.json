@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_link_menu_items",
+  "info": {
+    "displayName": "menuItem",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "sinistra",
+        "destra"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    },
+    "link": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
