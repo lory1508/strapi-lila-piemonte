@@ -512,7 +512,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String & Schema.Attribute.Required;
+    location: Schema.Attribute.Relation<'manyToOne', 'api::location.location'>;
     publishedAt: Schema.Attribute.DateTime;
     start: Schema.Attribute.DateTime & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -569,6 +569,7 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    events: Schema.Attribute.Relation<'oneToMany', 'api::event.event'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
