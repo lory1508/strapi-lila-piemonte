@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "volontariatoes",
+  "info": {
+    "singularName": "volontariato",
+    "pluralName": "volontariatoes",
+    "displayName": "Volontariato"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

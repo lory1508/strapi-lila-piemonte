@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_event_next_events",
+  "info": {
+    "displayName": "nextEvent"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    }
+  },
+  "config": {}
+}

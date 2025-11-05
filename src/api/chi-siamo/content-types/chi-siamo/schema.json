@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "chi_siamos",
+  "info": {
+    "singularName": "chi-siamo",
+    "pluralName": "chi-siamos",
+    "displayName": "Chi siamo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

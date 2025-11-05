@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "sostienicis",
+  "info": {
+    "singularName": "sostienici",
+    "pluralName": "sostienicis",
+    "displayName": "Sostienici"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
