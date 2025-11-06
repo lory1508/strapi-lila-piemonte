@@ -14,11 +14,11 @@
     "title": {
       "type": "string"
     },
-    "contentUp": {
-      "type": "richtext"
+    "contentUp2": {
+      "type": "blocks"
     },
-    "contentDown": {
-      "type": "richtext"
+    "contentDown2": {
+      "type": "blocks"
     },
     "cards": {
       "type": "component",

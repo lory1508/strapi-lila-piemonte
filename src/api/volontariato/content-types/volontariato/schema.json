@@ -14,8 +14,8 @@
     "title": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
+    "content2": {
+      "type": "blocks"
     },
     "image": {
       "type": "media",

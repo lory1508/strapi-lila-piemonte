@@ -16,7 +16,7 @@
       "required": true
     },
     "content": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "btnStatuto": {
       "type": "component",

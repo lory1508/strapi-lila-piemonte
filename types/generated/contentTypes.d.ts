@@ -442,7 +442,7 @@ export interface ApiChiSiamoChiSiamo extends Struct.SingleTypeSchema {
   };
   attributes: {
     btnStatuto: Schema.Attribute.Component<'button.button', false>;
-    content: Schema.Attribute.RichText;
+    content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -621,6 +621,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
   attributes: {
     content: Schema.Attribute.RichText;
+    content2: Schema.Attribute.Blocks;
     cover: Schema.Attribute.Media<'images'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -687,8 +688,8 @@ export interface ApiSostieniciSostienici extends Struct.SingleTypeSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'card.card', true>;
-    contentDown: Schema.Attribute.RichText;
-    contentUp: Schema.Attribute.RichText;
+    contentDown2: Schema.Attribute.Blocks;
+    contentUp2: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -717,7 +718,7 @@ export interface ApiVolontariatoVolontariato extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.RichText;
+    content2: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
