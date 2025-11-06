@@ -19,7 +19,6 @@ export interface CardCard extends Struct.ComponentSchema {
     displayName: 'card';
   };
   attributes: {
-    content2: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.Component<'link.link', false>;
     specialContent: Schema.Attribute.String;
@@ -46,7 +45,6 @@ export interface HeroHero extends Struct.ComponentSchema {
   };
   attributes: {
     background: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    content: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }

@@ -14,12 +14,6 @@
     "title": {
       "type": "string"
     },
-    "contentUp2": {
-      "type": "blocks"
-    },
-    "contentDown2": {
-      "type": "blocks"
-    },
     "cards": {
       "type": "component",
       "component": "card.card",

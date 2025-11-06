@@ -18,12 +18,6 @@
     "subtitle": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
-    "content2": {
-      "type": "blocks"
-    },
     "cover": {
       "type": "media",
       "multiple": false,
