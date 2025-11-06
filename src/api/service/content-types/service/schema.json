@@ -18,6 +18,9 @@
     "subtitle": {
       "type": "string"
     },
+    "content": {
+      "type": "blocks"
+    },
     "cover": {
       "type": "media",
       "multiple": false,

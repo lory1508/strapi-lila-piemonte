@@ -9,6 +9,9 @@
       "type": "string",
       "required": true
     },
+    "content": {
+      "type": "blocks"
+    },
     "link": {
       "type": "component",
       "component": "link.link",

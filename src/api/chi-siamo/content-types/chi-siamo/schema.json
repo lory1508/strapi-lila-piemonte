@@ -15,6 +15,9 @@
       "type": "string",
       "required": true
     },
+    "content": {
+      "type": "blocks"
+    },
     "btnStatuto": {
       "type": "component",
       "component": "button.button",

@@ -20,6 +20,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }
