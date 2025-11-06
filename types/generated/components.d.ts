@@ -95,7 +95,7 @@ export interface ServiceService extends Struct.ComponentSchema {
     displayName: 'service';
   };
   attributes: {
-    services: Schema.Attribute.Component<'services.services', true>;
+    services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
     title: Schema.Attribute.String;
   };
 }

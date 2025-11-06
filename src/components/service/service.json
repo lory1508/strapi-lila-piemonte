@@ -9,9 +9,9 @@
       "type": "string"
     },
     "services": {
-      "type": "component",
-      "component": "services.services",
-      "repeatable": true
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
     }
   },
   "config": {}
