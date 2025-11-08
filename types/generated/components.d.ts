@@ -22,6 +22,13 @@ export interface CardCard extends Struct.ComponentSchema {
     content: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.Component<'link.link', false>;
+    position: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     specialContent: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -71,7 +78,13 @@ export interface LinkMenuItem extends Struct.ComponentSchema {
   };
   attributes: {
     link: Schema.Attribute.Component<'link.link', false>;
-    order: Schema.Attribute.Integer;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     position: Schema.Attribute.Enumeration<['sinistra', 'destra']> &
       Schema.Attribute.Required;
   };

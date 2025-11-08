@@ -15,7 +15,8 @@
       ]
     },
     "order": {
-      "type": "integer"
+      "type": "integer",
+      "min": 1
     },
     "link": {
       "type": "component",

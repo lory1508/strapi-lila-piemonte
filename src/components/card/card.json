@@ -9,6 +9,10 @@
       "type": "string",
       "required": true
     },
+    "position": {
+      "type": "integer",
+      "min": 1
+    },
     "content": {
       "type": "blocks"
     },
